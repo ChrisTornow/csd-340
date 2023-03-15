@@ -1,2 +1,4 @@
-# csd-340
-Introduction to GitHub and HTML
+# CSD 340 Web Development with HTML and CSS
+## Contributors
+* Andrew Sydoriak
+* Chris Tornow
