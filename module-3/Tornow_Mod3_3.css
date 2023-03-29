@@ -4,7 +4,7 @@ h1 {
 h3 {
     font-weight: 500;
 }
-.side-by-side-left {
+.left {
     border: 1px solid red;
     border-radius: 15px;
     padding: 10px 10px 10px 10px;
@@ -15,7 +15,7 @@ ol {
     font-weight: 300;
     list-style-position: inside;
 }
-.side-by-side-right {
+.right {
     border: 1px dashed red;
     border-radius: 15px;
     padding: 10px 10px 10px 10px;
@@ -30,7 +30,9 @@ ul {
 .last {
     width: 100%;
     margin-top: 60%;
-    margin-bottom: 20px; 
+}
+.last a {
+    margin-bottom: 20px;
     float: right;
     text-align: right;
 }

@@ -2,6 +2,8 @@
 Chris Tornow
 CSD-340 : Assignment 3.3 
 03-20-2023
+I originally had all inline css but removed due to issues overlapping
+All css is ONLY in supporting file now
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -16,9 +18,9 @@ CSD-340 : Assignment 3.3
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div id="container">
-            <h1 style="text-align:center">Assignment 3.3: Build a Web Page Exercise - Part 3</h1>
-            <div class="side-by-side-left" style="width: 45%;"> 
+        <main id="container">
+            <h1>Assignment 3.3: Build a Web Page Exercise - Part 3</h1>
+            <div class="left"> 
                 <h3>Top 10 Favorite Books</h3>
                 <ol>
                     <li>Roller Coaster: Wooden and Steel Coasters, Twisters and Corkscrews</li>
@@ -33,7 +35,7 @@ CSD-340 : Assignment 3.3
                     <li>Python Crash Course, 3rd Edition: A Hands-On, Project-Based Introduction to Programming</li>
                 </ol> 
             </div>
-            <div class="side-by-side-right" style="width: 45%;"> 
+            <div class="right"> 
                 <h3>5 Things I’ve Learned Since the Course Started</h3>
                 <ul>
                     <li>Visual designs and patterns that ease navigation in applications</li>
@@ -43,9 +45,9 @@ CSD-340 : Assignment 3.3
                     <li>Using CSS file to make html more attractive</li>
                 </ul>
             </div>
-            <div class="last"  style="margin-top: 60%; width: 100%;">
-                <a style= "float: right;" href="../index.html">back to Landing Page</a>
+            <div class="last">
+                <a href="../index.html">back to Landing Page</a>
             </div>
-        </div>
+        </main>
     </body>
 </html>
