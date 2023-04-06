@@ -1,0 +1,43 @@
+:root {
+    --primarycolor: rgb(17, 13, 228);
+    --secondarycolor: rgb(90, 161, 208);
+  }
+h1 {
+    text-align:center;
+    color: var(--primarycolor);
+}
+h3 {
+    text-align:center;
+    color: var(--secondarycolor);
+}
+#image-gallery {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.grid-item {
+    border: 1px solid  var(--secondarycolor);  
+}
+img {
+    max-height: 200px;
+}
+img:hover {
+    cursor: pointer;
+}
+figure {
+    text-align:center;
+    font-style: italic;
+    font-size: 0.75em;
+    color: var(--secondarycolor);
+}
+.last {
+    width: 100%;
+    margin-top: 60%;
+}
+.last a {
+    margin-bottom: 20px;
+    float: right;
+    text-align: right;
+}
+a:hover {
+    text-decoration: underline;
+}
