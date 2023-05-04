@@ -1,0 +1,90 @@
+:root {
+    --primarycolor: rgb(17, 13, 228);
+    --secondarycolor: rgb(90, 161, 208);
+    --textcolor:white;
+    --texthighlightcolor:rgb(204, 84, 24);
+    --boxshadow:rgba(0, 0, 0, 0.2)
+  }
+header {
+    background-color: var(--primarycolor);
+    color: var(--textcolor);
+    padding: 20px;
+    text-align: center;
+}
+h1 {
+    font-weight: 400;
+}
+#navbar {
+    overflow: hidden;
+    background-color: var(--secondarycolor);
+    border-bottom: solid 15px var(--primarycolor);
+}
+#navbar a {
+    float: left;
+    display: block;
+    color: var(--textcolor);
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#navbar a:hover {
+    color: var(--texthighlightcolor);
+    background-color: var(--secondarycolor);
+}
+#container {
+    margin: 2% 5% 5% 100px;
+    padding: 10px;
+}
+.card {
+    box-shadow: 0 4px 8px 0 var(--boxshadow);
+    transition: 0.3s;
+    width: 50%;
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 var(--boxshadow);
+}
+.card-title {
+    text-align: center;
+    font-size: 2em;
+    color: var(--primarycolor);
+    font-weight: 400;
+}
+.card-content {
+    padding: 2px 16px;
+}
+#movies {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+}
+#movies th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--primarycolor);
+    color: var(--textcolor);
+}
+#movies td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+footer {
+    background-color: var(--primarycolor);
+    position: fixed;
+    left:0;
+    bottom: 0;
+    width: 100%;
+}
+footer p {
+    color: var(--textcolor);
+    font-weight: 400;
+
+    padding-right: 10px;
+    font-style: italic;
+}
+footer a {
+    text-decoration: none;
+    color: var(--textcolor);
+}
+footer a:hover {
+    text-decoration: underline;
+}
