@@ -1,0 +1,41 @@
+<!-- 
+Chris Tornow
+CSD-340 : Assignment 10.3 
+05-15-2023
+References:
+https://stackoverflow.com/questions/32982976/change-image-on-click-6-image-loop
+https://photosentinel.com/time-lapse-equipment/construction-timelapse-the-complete-guide-2021-edition/
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CSD 340 Web Development with HTML and CSS</title>
+        <link rel="stylesheet" href="Tornow_Mod10_3.css">
+        <meta charset="UTF-8">
+        <meta name="description" content="My Assignment 9.3">
+        <meta name="keywords" content="HTML, CSS, Class, CSD-340">
+        <meta name="author" content="Chris Tornow">
+        <meta name="pragma" content="no-cache">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            var counter = 0,
+            // put original src in last slot so it doesn't take two clicks to move to second image
+            gallery = ["2.png", "3.png", "4.png", "5.png", "6.png", "7.png","1.png"],
+            rotateGallery = function () {
+                document.getElementById("ImgGallery").src = gallery[counter];
+                counter++;
+                if (counter >= gallery.length) {
+                    counter = 0;
+                }
+            };
+       </script>
+    </head>
+    <body>
+        <div id="container">
+        <h1>Assignment 10.3: JavaScript - Part 2</h1>
+        <h3>Click image to show construction progression</h2>
+        <div>
+          <img src="1.png" id="ImgGallery" onclick="rotateGallery()"/>
+        </div>
+    </body>
+</html>
