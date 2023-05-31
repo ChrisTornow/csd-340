@@ -1,0 +1,85 @@
+<!-- 
+Chris Tornow
+CSD-340 : Assignment 12.2 
+05-29-2023
+https://www.geeksforgeeks.org/how-to-creating-html-list-from-javascript-array/#
+https://www.tutorialspoint.com/how-to-create-html-list-from-javascript-array
+https://www.clairecodes.com/blog/2020-03-29-how-to-reverse-ordered-list-counters-in-html/
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CSD 340 Development with HTML and CSS</title>
+        <link rel="stylesheet" href="Tornow_Mod12_2.css">
+        <meta charset="UTF-8">
+        <meta name="description" content="My Assignment 3.3">
+        <meta name="keywords" content="HTML, CSS, Class, CSD-340">
+        <meta name="author" content="Chris Tornow">
+        <meta name="pragma" content="no-cache">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <script>
+        let books = ["Roller Coaster: Wooden and Steel Coasters, Twisters and Corkscrews", 
+            "Roller Coaster",
+            "Roller Coasters: A Thrill Seeker's Guide to The Ultimate Scream Machines", 
+            "The Roller Coaster Lover's Companion: A Thrill Seeker's Guide to the World's Best Coasters", 
+            "Inside the Titanic",
+            "The Pout-Pout Fish",
+            "Where's Waldo Now?",
+            "100 Things Every Designer Needs to Know About People",
+            "HTML and CSS: Design and Build Websites",
+            "Python Crash Course, 3rd Edition: A Hands-On, Project-Based Introduction to Programming"];
+
+        let learned = ["Visual designs and patterns that ease navigation in applications",
+            "The ways in which people read versus understand",
+            "How to push files into GitHub",
+            "Applying of table to split a webpage",
+            "Using CSS file to make html more attractive"];
+
+        function PrintList(elementId,array,desc){
+            let write = document.getElementById(elementId);
+            var html = "";
+            if (desc) {
+                array.reverse();
+                write.reversed = true;
+            } else {
+                write.reversed = false;
+            }
+            for (var i = 0; i < array.length; ++i) {
+                html += "<li>" + array[i]+ "</li>";
+            }
+            document.getElementById(elementId).innerHTML = html;
+            if (desc) {
+                // Reverse back to original
+                array.reverse();
+            }  
+        }
+        function Asc(elementId,array){
+            PrintList(elementId,array,false);
+        }
+        function Desc(elementId,array){
+            PrintList(elementId,array,true);
+        }
+    </script>
+    <body>
+        <main id="container">
+            <h1>Assignment 12.2: JavaScript - Part 4</h1>
+            <div class="left"> 
+                <h3>Top 10 Favorite Books</h3>
+                <button onclick="Asc('BookList',books)">Top to Bottom</button>
+                <button onclick="Desc('BookList',books)">Bottom to Top</button>
+                <hr>
+                <ol id = "BookList"></ol>
+                <script>Asc('BookList',books)</script>
+            </div>
+            <div class="right"> 
+                <h3>5 Things I’ve Learned Since the Course Started</h3>
+                <ul id="myLearned"></ul>
+                <script>Asc('myLearned',learned)</script>
+            </div>
+            <div class="last">
+                <a href="../index.html">back to Landing Page</a>
+            </div>
+        </main>
+    </body>
+</html>
